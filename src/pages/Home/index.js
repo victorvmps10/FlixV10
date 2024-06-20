@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import api from "../../services/api";
-import './index.css';
+import './Home.css';
 import { Link } from "react-router-dom";
 
 export default function Home(){
-    const [filmes, settFilmes] = useState([]);
+    const [filmes, setFilmes] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(()=>{
         async function loadFilmes(){
@@ -16,17 +16,17 @@ export default function Home(){
                         page: 1,
                     }
                 })
-                settFilmes(response.data.results.slice(0, 10));
+                setFilmes(response.data.results.slice(0, 10));
                 setTimeout(() => {
                     setLoading(false);
-                }, 1500);
+                }, 1000);
             } 
            
             
         }
         loadFilmes();
       
-    }, [])
+    }, [loading])
    if(loading){
     return(
         <div className="loading">
@@ -42,7 +42,7 @@ export default function Home(){
                         <article key={filme.id}>
                             <strong>{filme.title}</strong>
                             <img 
-                            src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`}
+                            src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`}
                             alt="filme.title"/>
                             <Link to={`/filmes/${filme.id}`}>Acessar</Link> 
                         </article>

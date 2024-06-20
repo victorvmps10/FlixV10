@@ -1,0 +1,64 @@
+.container{
+    display: flex;
+}
+
+.filme-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.filme-info img{
+    width: 800px;
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.filme-info span{
+    text-align: center;
+    font-size: 20px;
+    margin: 25px;
+}
+
+.filme-info h3{
+    margin-top: 10px;
+}
+
+.loading{
+    max-width: 800px;
+    margin: 14px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.areaBtn{
+    padding: 5px;
+    text-decoration: none;
+}
+
+.areaBtn button{
+   background-color: #116FEB;
+   color: #FFF;
+   border-radius: 5px;
+   margin: 5px;
+   width: 100px;
+   padding: 10px auto;
+   max-width: 100%;
+   max-height: 100px;
+   font-size: 30px;
+}
+
+.areaBtn a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+
