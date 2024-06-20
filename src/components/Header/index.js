@@ -6,7 +6,7 @@ export default function Header(){
     return(
         <header>
             <Link className="logo"to="/">V10 Flix</Link>
-            <Link className="favoritos"to="/">Meus filmes</Link>
+            <Link className="favoritos"to="/favoritos">Meus filmes</Link>
             
         </header>
     )

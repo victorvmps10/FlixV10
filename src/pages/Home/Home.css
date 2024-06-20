@@ -41,6 +41,10 @@
     border-bottom-right-radius: 8px;
   }
 
+  .lista-filmes a:hover{
+    background-color: red;
+  }
+
   .loading{
     max-width: 800px;
     margin: 14px auto;

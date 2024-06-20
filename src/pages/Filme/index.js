@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import api from "../../services/api";
 import './Filme.css';
-
+import { toast } from "react-toastify";
 import { useParams, useNavigate } from "react-router-dom";
 
 export default function Filme(){
@@ -43,12 +43,12 @@ export default function Filme(){
         const hasFilme = filmesSalvos.some((filmesSalvo)=> filmesSalvo.id === filmes.id)
 
         if(hasFilme){
-            alert(`ESSE FILME JA TEM`);
+            toast.warn(`ESSE FILME JA TEM NA LISTA`);
             return;
         }
             filmesSalvos.push(filmes);
             localStorage.setItem("@Flixv10", JSON.stringify(filmesSalvos));
-            alert(`Salvo sucess`);
+            toast.success(`Salvo com sucesso :)`);
 
     }
     if(loading){

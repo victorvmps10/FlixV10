@@ -56,6 +56,9 @@
    font-size: 30px;
 }
 
+.areaBtn button:hover{
+    background-color: red;
+}
 .areaBtn a{
     text-decoration: none;
     color: #FFF;
